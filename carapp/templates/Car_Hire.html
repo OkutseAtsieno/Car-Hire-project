@@ -1,0 +1,107 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Toyota Land Cruiser Prado TX -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'cc.png' %}" alt="Toyota Prado TX" class="img-fluid rounded shadow" style="max-height: 550px; width: 100%; object-fit: cover;" />
+    </div>
+    <div class="col-md-1 d-none d-md-block text-center">
+      <div style="border-left: 2px solid #ccc; height: 100%;"></div>
+    </div>
+    <div class="col-md-5 mt-4 mt-md-0">
+      <h3 class="mb-3">Toyota Land Cruiser Prado TX</h3>
+      <p>The Toyota Land Cruiser Prado TX is a premium SUV designed for both urban and rugged terrains.</p>
+      <ul>
+        <li>Engine: 2.7L Petrol</li>
+        <li>Transmission: Automatic</li>
+        <li>Seats: 7 passengers</li>
+        <li>Fuel Efficiency: 9.5 km/l</li>
+        <li>Ksh. 12,000 ($92.78) per day (fuel not included)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Toyota Vanguard -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'vv.png' %}" alt="Toyota Vanguard" class="img-fluid rounded shadow" style="max-height: 550px; width: 100%; object-fit: cover;" />
+    </div>
+    <div class="col-md-1 d-none d-md-block text-center">
+      <div style="border-left: 2px solid #ccc; height: 100%;"></div>
+    </div>
+    <div class="col-md-5 mt-4 mt-md-0">
+      <h3 class="mb-3">Toyota Vanguard</h3>
+      <p>The Toyota Vanguard offers a refined blend of versatility, performance, and comfort.</p>
+      <ul>
+        <li>Engine: 2.4L Petrol</li>
+        <li>Transmission: Automatic</li>
+        <li>Seats: 7 passengers</li>
+        <li>Fuel Efficiency: 10.2 km/l</li>
+        <li>Ksh. 6,500 ($50.19) per day (fuel not included)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Toyota Axio -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'axio.jpg' %}" alt="Toyota Axio" class="img-fluid rounded shadow" style="max-height: 550px; width: 100%; object-fit: cover;" />
+    </div>
+    <div class="col-md-1 d-none d-md-block text-center">
+      <div style="border-left: 2px solid #ccc; height: 100%;"></div>
+    </div>
+    <div class="col-md-5 mt-4 mt-md-0">
+      <h3 class="mb-3">Toyota Axio</h3>
+      <p>The Toyota Axio is a reliable and fuel-efficient saloon car ideal for city and highway driving.</p>
+      <ul>
+        <li>Engine: 1.5L Petrol</li>
+        <li>Transmission: Automatic (CVT)</li>
+        <li>Seats: 5 passengers</li>
+        <li>Fuel Efficiency: 18–22 km/l</li>
+        <li>Ksh. 5,500 ($42.52) per day (fuel not included)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Toyota Noah / Voxy -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <img src="{% static 'noah.png' %}" alt="Toyota Noah / Voxy" class="img-fluid rounded shadow" style="max-height: 550px; width: 100%; object-fit: cover;" />
+    </div>
+    <div class="col-md-1 d-none d-md-block text-center">
+      <div style="border-left: 2px solid #ccc; height: 100%;"></div>
+    </div>
+    <div class="col-md-5 mt-4 mt-md-0">
+      <h3 class="mb-3">Toyota Noah / Voxy</h3>
+      <p>The Toyota Noah and Voxy are versatile 7-seater MPVs ideal for families, travel groups, and shuttle services.</p>
+      <ul>
+        <li>Engine: 2.0L Petrol</li>
+        <li>Transmission: Automatic (CVT)</li>
+        <li>Seats: 7–8 passengers</li>
+        <li>Fuel Efficiency: 13–16 km/l</li>
+        <li>Ksh. 6,500 ($ 50.19) per day (fuel not included)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Book Now Button -->
+<div class="container py-5 text-center">
+  <a href="{% url 'Booking' %}" class="btn btn-lg px-5" style="background-color: #ffc107; color: black; border: none;">
+    Book Now
+  </a>
+</div>
+
+
+{% endblock content %}

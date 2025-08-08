@@ -1,0 +1,123 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ==================== NORMAL PICKUP ==================== -->
+<div class="container py-5">
+  <h3><i><b>AIRPORT TRANSFERS – NORMAL PICKUP</b></i></h3>
+
+  <div class="row align-items-center">
+    <!-- Left: Image -->
+    <div class="col-md-6 text-center">
+      <img src="{% static 'axio.jpg' %}" alt="Toyota Axio" 
+           class="img-fluid rounded shadow" 
+           style="max-height: 400px; width: 100%; object-fit: cover;" />
+    </div>
+
+    <!-- Divider -->
+    <div class="col-md-1 d-none d-md-block text-center">
+      <div style="border-left: 2px solid #ccc; height: 100%;"></div>
+    </div>
+
+    <!-- Right: Info -->
+    <div class="col-md-5 mt-4 mt-md-0">
+      <h4>Toyota Axio</h4>
+      <p>
+        The Toyota Axio is a comfortable, fuel-efficient saloon car ideal for 
+        solo travelers, couples, or small groups looking for reliable airport transfers.
+      </p>
+      <ul>
+        <li>Engine: 1.5L Petrol</li>
+        <li>Transmission: Automatic</li>
+        <li>Seats: 4 passengers</li>
+        <li>Fuel Efficiency: 18–20 km/l</li>
+        <li>Ksh. 4,000 ($30.95) per transfer (dropping/picking) from Wilson CBD</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== EXECUTIVE CATEGORY ==================== -->
+<div class="container py-5">
+  <h3><i><b>AIRPORT TRANSFERS – EXECUTIVE CATEGORY</b></i></h3>
+
+  <!-- Noah -->
+  <div class="row align-items-center mb-5">
+    <!-- Left: Image -->
+    <div class="col-md-6 text-center">
+      <img src="{% static 'noah.png' %}" alt="Toyota Noah / Voxy" 
+           class="img-fluid rounded shadow" 
+           style="max-height: 400px; width: 100%; object-fit: cover;" />
+    </div>
+
+    <!-- Divider -->
+    <div class="col-md-1 d-none d-md-block text-center">
+      <div style="border-left: 2px solid #ccc; height: 100%;"></div>
+    </div>
+
+    <!-- Right: Info -->
+    <div class="col-md-5 mt-4 mt-md-0">
+      <h4>Toyota Noah / Voxy</h4>
+      <p>
+        The Toyota Noah and Voxy are versatile 7-seater MPVs, perfect for 
+        executive airport transfers, family travel, and VIP shuttle services.
+      </p>
+      <ul>
+        <li>Engine: 2.0L Petrol</li>
+        <li>Transmission: Automatic (CVT)</li>
+        <li>Seats: 7–8 passengers</li>
+        <li>Fuel Efficiency: 13–16 km/l</li>
+        <li>Ksh. 5,000 ($38.70) per transfer (dropping/picking) from Wilson CBD</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Alphard -->
+  <div class="row align-items-center">
+    <!-- Left: Image -->
+    <div class="col-md-6 text-center">
+      <img src="{% static 'alphard.png' %}" alt="Toyota Alphard" 
+           class="img-fluid rounded shadow" 
+           style="max-height: 400px; width: 100%; object-fit: cover;" />
+    </div>
+
+    <!-- Divider -->
+    <div class="col-md-1 d-none d-md-block text-center">
+      <div style="border-left: 2px solid #ccc; height: 100%;"></div>
+    </div>
+
+    <!-- Right: Info -->
+    <div class="col-md-5 mt-4 mt-md-0">
+      <h4>Toyota Alphard</h4>
+      <p>
+        The Toyota Alphard offers unmatched luxury, comfort, and elegance, 
+        making it the ideal choice for VIP airport transfers and executive travel.
+      </p>
+      <ul>
+        <li>Engine: 2.5L Petrol</li>
+        <li>Transmission: Automatic</li>
+        <li>Seats: 6–7 passengers</li>
+        <li>Fuel Efficiency: 10–12 km/l</li>
+        <li>Ksh. 6,000 ($ 46.39) per transfer (dropping/picking) from Wilson CBD</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Note -->
+<div class="container mt-4">
+  <small class="text-muted d-block text-center">
+    <em>Note: Prices are subject to adjustment in accordance with seasonal variations and prevailing market conditions.</em>
+  </small>
+</div>
+
+<!-- Book Now Button -->
+<div class="container py-5 text-center">
+  <a href="{% url 'Booking' %}" class="btn btn-lg px-5" style="background-color: #ffc107; color: black; border: none;">
+    Book Now
+  </a>
+</div>
+
+
+{% endblock content %}

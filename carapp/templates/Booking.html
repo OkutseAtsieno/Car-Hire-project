@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <form action="{% url 'Booking' %}" method="POST" class="p-4 rounded shadow bg-white">
+        {% csrf_token %}
+        <h3 class="text-center mb-4">Book a Vehicle</h3>
+        <div class="mb-3">
+  <label for="service" class="form-label">Service Type</label>
+  <select class="form-select" id="service" name="service" required>
+    <option value="">Select a service</option>
+    <option value="Airport Transfer">Airport Transfer</option>
+    <option value="Car Hire">Car Hire</option>
+    <option value="Game Drive">Game Drive</option>
+    <option value="Events Hire">Events Hire</option>
+  </select>
+</div>
+
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+          <label for="name">Full Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+          <label for="email">Email address</label>
+        </div>
+
+
+ <div class="form-floating mb-3">
+  <input type="tel" class="form-control" id="phone" name="phone" placeholder="e.g. 0712345678 or +254712345678" required>
+  <label for="phone">Phone Number</label>
+</div>
+
+
+       
+        <div class="mb-3">
+          <label for="vehicle" class="form-label">Choose Vehicle</label>
+          <select class="form-select" id="vehicle" name="vehicle" required>
+            <option value="">Select a car</option>
+            <option value="Toyota Axio">Saloon Car (Toyota Axio)</option>
+            <option value="Toyota Noah/Voxy">Voxy / Noah</option>
+            <option value="Toyota Prado TX">Toyota Prado TX</option>
+            <option value="Toyota Vanguard">Vanguard</option>
+          </select>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="date" class="form-control" id="pickup_date" name="pickup_date" required>
+          <label for="pickup_date">Pickup Date</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="date" class="form-control" id="return_date" name="return_date" required>
+          <label for="return_date">Return Date</label>
+        </div>
+
+        <div class="form-floating mb-4">
+          <textarea class="form-control" placeholder="Leave a note here" id="message" name="message" style="height: 100px"></textarea>
+          <label for="message">Additional Message (optional)</label>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-warning btn-lg px-4">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+ 
+
+{% endblock content %}

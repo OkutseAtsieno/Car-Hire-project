@@ -1,0 +1,141 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Hire</title>
+
+  <!-- Google Fonts: Poppins and Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar-yellow {
+      background-color: #FFD700;
+    }
+
+    .navbar-brand h2,
+    .navbar-brand h4 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      color: black;
+    }
+
+    .navbar-brand h2 {
+      font-size: 1.75rem;
+      font-style: italic;
+    }
+
+    .navbar-brand h4 {
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .tagline-overlay {
+      position: absolute;
+      top: 20%;
+      left: 5%;
+      color: white;
+      font-family: sans-serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      z-index: 10;
+      max-width: 300px;
+    }
+
+    /* Optional: Ensure dropdowns work well on hover */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    /* Prevent dropdown from closing on click inside */
+    .dropdown-menu {
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky Yellow Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-yellow sticky-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- Logo & Slogan -->
+      <a class="navbar-brand" href="#">
+        <h2>BENITTO RENTALS</h2>
+        <h4>Chauffeur Driven Car Hire</h4>
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+        aria-expanded="false" aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle" 
+              href="#" 
+              id="servicesDropdown"
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="{% url 'Events_Hire'%}">Events Hire</a></li>
+              <li><a class="dropdown-item" href="{%url 'Car_Hire'%}">Car Hire (Chauffeur driven)</a></li>
+              <li><a class="dropdown-item" href="{%url 'Airport_transfer'%}">Airport Transfer</a></li>
+              <li><a class="dropdown-item" href="{%url 'Game_Drive'%}">Game drive</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="{%url 'Contacts'%}">Contacts</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Image with optional overlay -->
+  <div class="position-relative">
+    <img src="{% static 'home.png' %}" alt="Landing Image" class="hero-image" />
+
+    {% block content %}
+    
+    {% endblock content %}
+  </div>
+
+  <!-- Bootstrap JS Bundle (with Popper.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Optional: JavaScript to add hover effect on dropdown (already handled in CSS above) -->
+  <!-- No custom JS needed if you use the CSS hover trick -->
+</body>
+</html>
