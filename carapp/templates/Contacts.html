@@ -3,25 +3,15 @@
 {% load static %}
 
 {% block content %}
-
-<!-- Banner -->
-<div class="py-5 text-center text-white" style="background: url('{% static 'banner.jpg' %}') center/cover no-repeat; min-height: 200px;">
-    <div class="container d-flex justify-content-center">
-        <div class="p-4 rounded shadow" style="background-color: #FFD700; color: #333; max-width: 600px;">
-            <h2 class="fw-bold mb-2">Have enquiries?</h2>
-            <p class="mb-0">
-                Contact us at 
-                <a href="tel:+254735522680" class="fw-semibold" style="color: #b36b00;">+254 735 522 680</a> 
-                or email 
-                <a href="beruogano@gmail.com" class="fw-semibold" style="color: #b36b00;">benangano@gmail.com</a>
-            </p>
-        </div>
+<div class="position-absolute start-50 translate-middle-x w-100 px-3" style="top: 90px; max-width: 700px;">
+    <div class="p-4 rounded shadow" style="background-color: #FFD700; color: #333;">
+        <h2 class="fw-bold mb-2">Have enquiries?</h2>
+        <p class="mb-0">
+            Contact us at 
+            <a href="tel:+254735522680" class="fw-semibold" style="color: #b36b00;">+254 735 522 680</a> 
+            or email 
+            <a href="mailto:benangano@gmail.com" class="fw-semibold" style="color: #b36b00;">benangano@gmail.com</a>
+        </p>
     </div>
 </div>
-
-
 {% endblock content %}
-
-
-
-
